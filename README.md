@@ -5,7 +5,7 @@ Fast and simple to setup MTProto proxy written in Python.
 ## Starting Up ##
  
 1. `yum install git python3 -y ;python3 -m pip install --upgrade pip; pip install uvloop pycrypto pycryptodome cryptogrpaphy `   
-2. `git clone -b stable https://github.com/lim98939/mtprotoproxy-v.git; cd mtprotoproxy`
+2. `git clone -b stable https://github.com/lim98939/mtprotoproxy.git; cd mtprotoproxy`
 3. *(optional, recommended)* edit *config.py*, set **PORT**, **USERS** and **AD_TAG**
 4. `docker-compose` 安装   
 `sudo curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose `  
