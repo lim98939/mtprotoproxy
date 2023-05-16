@@ -1,6 +1,7 @@
 FROM ubuntu:22.10
 
-RUN apt-get update && apt-get install --no-install-recommends -y python3 python3-uvloop python3-pycryptodome python3-socks libcap2-bin ca-certificates && rm -rf /var/lib/apt/lists/*
+RUN sed -i 's#http://archive.ubuntu.com/#http://mirrors.tuna.tsinghua.edu.cn/#' /etc/apt/sources.list
+RUN apt-get update --fix-missing  && apt-get install --no-install-recommends -y python3 python3-uvloop python3-pycryptodome python3-socks libcap2-bin ca-certificates && rm -rf /var/lib/apt/lists/*
 RUN setcap cap_net_bind_service=+ep /usr/bin/python3.10
 
 RUN useradd tgproxy -u 10000
