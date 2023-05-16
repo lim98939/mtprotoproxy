@@ -3,11 +3,28 @@
 Fast and simple to setup MTProto proxy written in Python.
 
 ## Starting Up ##
-    
-1. `git clone -b stable https://github.com/alexbers/mtprotoproxy.git; cd mtprotoproxy`
-2. *(optional, recommended)* edit *config.py*, set **PORT**, **USERS** and **AD_TAG**
-3. `docker-compose up -d` (or just `python3 mtprotoproxy.py` if you don't like Docker)
-4. *(optional, get a link to share the proxy)* `docker-compose logs`
+ 
+1. `yum install git python3 -y ;python3 -m pip install --upgrade pip; pip install uvloop pycrypto pycryptodome cryptogrpaphy `   
+2. `git clone -b stable https://github.com/lim98939/mtprotoproxy-v.git; cd mtprotoproxy`
+3. *(optional, recommended)* edit *config.py*, set **PORT**, **USERS** and **AD_TAG**
+4. `docker-compose` 安装   
+`sudo curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose `  
+`sudo chmod +x /usr/local/bin/docker-compose`  
+5. docker-compose version ：用于查看当前的版本  
+docker-compose ps -a 查看当前启动服务  
+docker-compose build 用于docker-compose文件中描述的build构建镜像  
+docker-compose up 启动服务  
+docekr-compose stop 停止服务  
+docker-compose start 启动停止的服务  
+docker-compose run 启动docker-compose.yml描述的一个service  
+docker-compose restart 重启服务  
+docker-compose logs 查看日志  
+docker-compose down 下线服务  
+docker-compose pull 拉取镜像  
+docker-compose push 推送镜像到仓库  
+更多命令参考 docker-compose help
+4. `docker-compose up -d` (or just `python3 mtprotoproxy.py` if you don't like Docker)
+5. *(optional, get a link to share the proxy)* `docker-compose logs`
 
 ![Demo](https://alexbers.com/mtprotoproxy/install_demo_v2.gif)
 
